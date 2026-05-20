@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades Jinja</title>
+
+    <link rel="stylesheet" href= static/css/style.css>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Atividades Jinja</h1>
+
+    <!-- Atividade 1 -->
+    <div class="box">
+        <h2>1 - Mensagem</h2>
+
+        <p>Olá, {{ nome }}</p>
+    </div>
+
+    <!-- Atividade 2 -->
+    <div class="box">
+        <h2>2 - Nome e Idade</h2>
+
+        <p>Nome: {{ dados.nome }}</p>
+        <p>Idade: {{ dados.idade }}</p>
+    </div>
+
+    <!-- Atividade 3 -->
+    <div class="box">
+        <h2>3 - Dados do Usuário</h2>
+
+        <p>Nome: {{ usuario.nome }}</p>
+        <p>Email: {{ usuario.email }}</p>
+    </div>
+
+    <!-- Atividade 4 -->
+    <div class="box">
+        <h2>4 - Lista de Alunos</h2>
+
+        <ul>
+            {% for aluno in alunos %}
+                <li>{{ aluno }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Atividade 5 -->
+    <div class="box">
+        <h2>5 - Resultado</h2>
+
+        {% if nota >= 7 %}
+            <p>Aprovado</p>
+        {% else %}
+            <p>Reprovado</p>
+        {% endif %}
+    </div>
+
+    <!-- Botão Login -->
+    <div class="box">
+        <a href="/login">
+            <button>Ir para Login</button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
